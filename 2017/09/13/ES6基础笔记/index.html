@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>ES6（ECMAScript 6）基础 | 用唇语说colorful的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="在es6中是用let声明变量的 跟var类似 跟var的区别在于let只在它的代码块中有效一个大括号 就是一个代码块==&amp;gt;作用域 在es5中 代码块中声明的变量在任何地方都能取到let 的应用场景一般是用在for循环中比较有用 不能变量提升使用let 注意事项 1.不能重复声明使用const 声明变量 只能声明常量 一旦声明 不能改变，只在代码块中有效。例如：  12const PI =">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6（ECMAScript 6）基础">
+<meta property="og:url" content="http://Savingss.github.io/2017/09/13/ES6基础笔记/index.html">
+<meta property="og:site_name" content="用唇语说colorful的博客">
+<meta property="og:description" content="在es6中是用let声明变量的 跟var类似 跟var的区别在于let只在它的代码块中有效一个大括号 就是一个代码块==&amp;gt;作用域 在es5中 代码块中声明的变量在任何地方都能取到let 的应用场景一般是用在for循环中比较有用 不能变量提升使用let 注意事项 1.不能重复声明使用const 声明变量 只能声明常量 一旦声明 不能改变，只在代码块中有效。例如：  12const PI =">
+<meta property="og:updated_time" content="2017-09-13T12:12:00.906Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6（ECMAScript 6）基础">
+<meta name="twitter:description" content="在es6中是用let声明变量的 跟var类似 跟var的区别在于let只在它的代码块中有效一个大括号 就是一个代码块==&amp;gt;作用域 在es5中 代码块中声明的变量在任何地方都能取到let 的应用场景一般是用在for循环中比较有用 不能变量提升使用let 注意事项 1.不能重复声明使用const 声明变量 只能声明常量 一旦声明 不能改变，只在代码块中有效。例如：  12const PI =">
+    
+        <link rel="alternate" type="application/atom+xml" title="用唇语说colorful的博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/userbg.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/myself.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Saving Gor</h5>
+          <a href="mailto:471403499@qq.com" title="471403499@qq.com" class="mail">471403499@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                档案
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Blog主题地址
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">ES6（ECMAScript 6）基础</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">ES6（ECMAScript 6）基础</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-09-13T12:07:04.761Z" itemprop="datePublished" class="page-time">
+  2017-09-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-ES6基础笔记"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">ES6（ECMAScript 6）基础</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-09-13 20:07:04" datetime="2017-09-13T12:07:04.761Z"  itemprop="datePublished">2017-09-13</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>在es6中是用let声明变量的 跟var类似 跟var的区别在于let只在它的代码块中有效<br>一个大括号 就是一个代码块==&gt;作用域 在es5中 代码块中声明的变量在任何地方都能取到<br>let 的应用场景一般是用在for循环中比较有用 不能变量提升<br>使用let 注意事项 1.不能重复声明<br>使用const 声明变量 只能声明常量 一旦声明 不能改变，只在代码块中有效。例如：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const PI = 3.141569；</div><div class="line">const PI = 3.14;//此时会报错为：它不是一个常量</div></pre></td></tr></table></figure>
+<p>let的经典面试题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">一个for循环，用var声明一个变量，然后要我输入几就打印几</div><div class="line">var arr = [];</div><div class="line">for (var i = 0; i &lt; 10; i++) &#123;</div><div class="line">	arr[i] = function () &#123;</div><div class="line">		console.log(i);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">arr[6](); //此时输出10</div><div class="line"></div><div class="line">应该把for循环里面的var改为let，让let解决变量提升，不能让它变量提升，利用let的特性就是它只在它的代码块有效</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const PI = 3.1415982;</div><div class="line">		PI = 3.14;//报错：Uncaught TypeError: Assignment to constant variable.说明PI不是一个常量</div></pre></td></tr></table></figure>
+<blockquote>
+<p>const声明的变量 只在代码块会中有效</p>
+</blockquote>
+<pre><code>{
+        const a = 123;
+}
+
+console.log(a);//a is not define
+var arr = Array.prototype.slice.call(arguments)
+</code></pre><blockquote>
+<p>变量的解构赋值<br>es6中允许按照一定的模式,将数组和对象中的值,对变量进行赋值,这被称为解构。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">完全解构：</div><div class="line">var [a,b,c] = [1,2,3];</div><div class="line">不完全解构：</div><div class="line">var [a,,c] = [1,2,3];</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">对象的赋值</div><div class="line">var &#123;x1,x2,y1&#125; = &#123;x1:1,y1:2,x2:3&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">数组跟对象结合</div><div class="line">var [&#123;x1,y1,z1&#125;,[x2,y2,z2],x3,z3] = [&#123;z5:10,y1:20&#125;,[30,40],50]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">对象扩展运算符 使用三个点</div><div class="line">var [head,...detail] = [1,2,23];</div><div class="line">detail打印出来的是[2,23]；</div><div class="line">arguments对象不是一个 Array 。它类似于数组，但除了 长度之外没有任何数组属性。例如，它没有 pop 方法。但是它可以被转换为一个真正的数组</div><div class="line">es6中有两种方法可以把arguments转化为数组</div><div class="line">spread扩展符就是三个点...例如：</div><div class="line">function show(...argments)&#123;</div><div class="line">	console.log(arguments);</div><div class="line">&#125;</div><div class="line">function show(...argments)&#123;</div><div class="line">	var arr = Array.from(arguments);</div><div class="line">	console.log(arr);</div><div class="line">&#125;</div><div class="line">show(&apos;啊锐&apos;,&apos;阿荣&apos;,&apos;振诚&apos;,&apos;庆秋&apos;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>字符串模板</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var  a = 1;</div><div class="line">var  b = 2;</div><div class="line">es5写法：</div><div class="line">// var str = &quot;asfdasdasd&quot;+a+&quot;dasdasdasd&quot;+b;</div><div class="line">// console.log(str);</div><div class="line"></div><div class="line">// 模板字符串  是esc下面那个键</div><div class="line">var str1 = `asfdasdas$&#123;a&#125;dadasdasdasd$&#123;b&#125;b`</div><div class="line">console.log(str1);</div><div class="line"></div><div class="line">应用场景（小demo）：动态添加</div><div class="line">	var imgSrc = &apos;./1.png&apos;;</div><div class="line">	var title = &apos;我是一个h2&apos;;</div><div class="line"></div><div class="line">	$(&apos;ul&apos;).append(`		</div><div class="line">		&lt;li&gt;</div><div class="line">			&lt;h2&gt;$&#123;title&#125;&lt;/h2&gt;</div><div class="line">			&lt;img src=$&#123;imgSrc&#125; alt=&quot;&quot;&gt;</div><div class="line">		&lt;/li&gt;</div><div class="line">		`)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">数组赋值</div><div class="line">Es5：</div><div class="line">var arr1 = [1,2,3,4];</div><div class="line">var arr2 = [];</div><div class="line">for(var i = 0;i &lt;arr1.length;i++)&#123;</div><div class="line">	arr2.push(arr1[i]);</div><div class="line">&#125;</div><div class="line">console.log(arr2);</div><div class="line">Es6：</div><div class="line">var arr1 = [1,2,3,4];</div><div class="line">var newarr = Array.from(arr1);</div><div class="line">console.log(newarr);</div><div class="line">也可以使用扩展运算符,三个点...</div><div class="line">var arr1 = [1,2,3];</div><div class="line">var newarr = [...arr1];</div><div class="line">console.log(newarr);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：两个数组之间不能直接比较无论是“==”或者“===”都会返回false。<strong>因为JavaScript里面Array是对象，==或===操作符只能比较两个对象是否是同一个实例，也就是是否是同一个对象引用。目前JavaScript没有内置的操作符判断对象的内容是否相同。</strong>只能通过遍历数组元素比较。</p>
+<p>map和for-of</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">map  在 es6中能去遍历数组和对象的对象 ,叫map对象</div><div class="line"></div><div class="line">第一步 创建map对象</div><div class="line">var person = &#123;</div><div class="line">	name:&apos;黄智鹏&apos;,</div><div class="line">	age:18,</div><div class="line">	fav:function()&#123;</div><div class="line">		console.log(&apos;英语&apos;)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">var map = new Map();</div><div class="line">console.log(map);</div><div class="line">设置map对象  使用set方法</div><div class="line">var ar =[10,20];</div><div class="line"></div><div class="line">map的key值可以是对象也可以是字符串，数组；JavaScript的对象（Objetct），本质上是键值对的集合（Hash结构），但是传统上只能用字符串当做键。</div><div class="line">这就给他的使用带来了很大的限制、。为了解决这个问题ES6提供了Map数据结构它类似与对象，也是键值对集合，但是&apos;键&apos;的范围不限于字符串，</div><div class="line">各种类型的值（包括对象）都可以当做键。也就是说，Object结构提供了字符“串——值”的对应，Map结构提供了“值-值”的对应，</div><div class="line">是一种更完善的Hash结构实现。如果你需要键值对的结构，Map比Object更合适。</div><div class="line"></div><div class="line">map.set(person,1);</div><div class="line">map.set(&apos;b&apos;,2);</div><div class="line">map.set(&apos;c&apos;,3);</div><div class="line"></div><div class="line">var a = map.get(&apos;a&apos;)</div><div class="line">console.log(a);</div><div class="line">has()返回一个布尔值 如果有 则返回true</div><div class="line">console.log(map.has(&apos;c&apos;));</div><div class="line">删除map.delete(&apos;a&apos;);</div><div class="line"></div><div class="line">要想去遍历或者说使用了这个map对象，一定要注意要用for of不要用for in</div></pre></td></tr></table></figure>
+<blockquote>
+<p>箭头函数<br>    es6的箭头函数</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">伪代码   function add(x)&#123;&#125;    ======&gt; var add = (x)=&gt;&#123;&#125; add()</div><div class="line"></div><div class="line">var add = (x) =&gt; &#123;</div><div class="line">    return x</div><div class="line">&#125;</div><div class="line">ps:ES6的简写也能出现效果如下，注意的是有return的时候可以这么写</div><div class="line">var add = x=&gt;x;</div><div class="line">alert(add(40));</div><div class="line"></div><div class="line">应用小demo：</div><div class="line">box.click = ()=&gt;&#123;alert(&apos;123&apos;)&#125;;</div><div class="line">注意: 使用箭头函数 要注意两个点</div><div class="line">1. 会改变this的指向  它指向了window对象;</div><div class="line">    var name = &apos;张琳&apos;;	</div><div class="line">    var person = &#123;</div><div class="line">        name: &apos;焦🐑&apos;,</div><div class="line">        age: 2,</div><div class="line">        fav: () =&gt; &#123;</div><div class="line">            // 使用箭头函数 会改变this的指向  它指向了window对象</div><div class="line"></div><div class="line">            console.log(this);</div><div class="line">            console.log(`$&#123;this.name&#125;喜欢打王者荣耀`);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    person.fav();//this.name指向window下的name，会打印出张琳喜欢打王者荣耀</div><div class="line">2. 使用箭头函数 arguments就不能使用</div><div class="line">var person2 = &#123;</div><div class="line">        name: &apos;焦🐑&apos;,</div><div class="line">        age: 2,</div><div class="line">        fav: () =&gt; &#123;</div><div class="line">			使用箭头函数 arguments就不能使用</div><div class="line">            console.log(arguments);//报错arguments is not defined</div><div class="line">            console.log(`$&#123;this.name&#125;喜欢打王者荣耀`);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    person2.fav(1,2,3,4);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>ES6中对象的写法，使用箭头函数要想打印对象里的属性值 是不可行的，那么我们可以使用对象的<strong>单体模式模式</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">fav()&#123;&#125;对象的单体模式写法 ===等同于ES5写法===&gt; fav:function()&#123;&#125;</div><div class="line">var person = &#123;</div><div class="line">	name:&apos;kk仔&apos;,</div><div class="line">	age:20,</div><div class="line">	fav()&#123;</div><div class="line">			alert(this.name);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">person.fav();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>面向对象的三个特性 : 封装 继承(所谓继承,即继承父类的属性和方法,同样它还可以拥有自己的属性和方法)  多态</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">es5中 构造函数  创建对象的写法</div><div class="line">function Person(name,age)&#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Person.prototype.showName = function()&#123;</div><div class="line">	console.log(this.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">Person.prototype.showAge = function()&#123;</div><div class="line">	console.log(this.age);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var p =  new Person(&apos;焦🐑&apos;,18);</div><div class="line">p.showName();</div><div class="line">ps：比如说，上面这个构造函数Person，在下面new了这个Person之后我们可以称为这个Person对象就是一个类，所谓一个类呢，就是一个对象。</div><div class="line"></div><div class="line">而ES6中构造函数  创建对象的写法 是这样写的</div><div class="line">在大括号里面可以定义它自己想要的属性和方法，要想定义属性必须使用constructor方法</div><div class="line">class Person&#123;</div><div class="line">	//在new了一个Person之后，constructor方法会自动调用（自己调用自己一次）就创建了一个实例，说白了就是一个对象</div><div class="line">	constructor（name,age）&#123;</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	//如果要写方法的话必须要使用对象的单体模式写比如说：</div><div class="line">	showName()&#123;</div><div class="line">		console.log(this.name);</div><div class="line">	&#125;</div><div class="line">	showAge()&#123;</div><div class="line">		console.log(this.age);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">new p1 = new Person(&apos;朱博宇&apos;,16);</div><div class="line"></div><div class="line">验证：console.log(p1.constructor === Person)//返回true</div><div class="line">prototype 对应的对象中， 有一个天生自带的属性叫做constructor, （构造函数），这个属性的属性值指向的是当前函数本身。</div></pre></td></tr></table></figure>
+<blockquote>
+<p>承接上面的例子，面向对象的继承</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class student extends Person&#123;</div><div class="line">	//继承 既继承属性 又继承方法  并且也有属于自己的属性和方法</div><div class="line">	constructor(name,age,fav)&#123;</div><div class="line">		//子类一旦用到了继承 constructor和super()同时存在的</div><div class="line">		//super方法是为了继承父类的属性	</div><div class="line">		super(name,age);</div><div class="line">		this.fav = fav;</div><div class="line">	&#125;</div><div class="line">	showFav()&#123;</div><div class="line">		console.log(&apos;前端&apos;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var p = new Person(&apos;张三&apos;,19);</div><div class="line">p.showFav();//报错：p.showFav() is not a function</div><div class="line">父级不能调用子级的方法，子级可以调用父级的方法，为啥，因为继承嘛！~</div><div class="line">var s = Student(&apos;李斯&apos;,20);</div><div class="line">s.showName();//证明s继承了父级的方法</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-09-13T12:12:00.906Z" itemprop="dateUpdated">2017-09-13 20:12:00</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/09/13/ES6基础笔记/" target="_blank" rel="external">http://Savingss.github.io/2017/09/13/ES6基础笔记/</a>
+        
+    </div>
+    <footer>
+        <a href="http://Savingss.github.io">
+            <img src="/img/myself.jpg" alt="Saving Gor">
+            Saving Gor
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://Savingss.github.io/2017/09/13/ES6基础笔记/&title=《ES6（ECMAScript 6）基础》 — 用唇语说colorful的博客&pic=http://Savingss.github.io/img/myself.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://Savingss.github.io/2017/09/13/ES6基础笔记/&title=《ES6（ECMAScript 6）基础》 — 用唇语说colorful的博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://Savingss.github.io/2017/09/13/ES6基础笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6（ECMAScript 6）基础》 — 用唇语说colorful的博客&url=http://Savingss.github.io/2017/09/13/ES6基础笔记/&via=http://Savingss.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://Savingss.github.io/2017/09/13/ES6基础笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/09/12/hello-world/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢小主~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Saving Gor &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://Savingss.github.io/2017/09/13/ES6基础笔记/&title=《ES6（ECMAScript 6）基础》 — 用唇语说colorful的博客&pic=http://Savingss.github.io/img/myself.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://Savingss.github.io/2017/09/13/ES6基础笔记/&title=《ES6（ECMAScript 6）基础》 — 用唇语说colorful的博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://Savingss.github.io/2017/09/13/ES6基础笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6（ECMAScript 6）基础》 — 用唇语说colorful的博客&url=http://Savingss.github.io/2017/09/13/ES6基础笔记/&via=http://Savingss.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://Savingss.github.io/2017/09/13/ES6基础笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://Savingss.github.io/2017/09/13/ES6基础笔记/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
