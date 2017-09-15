@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Savingss.github.io/"/>
-  <updated>2017-09-14T16:52:05.894Z</updated>
+  <updated>2017-09-15T06:48:36.093Z</updated>
   <id>http://Savingss.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS的几种排序算法</title>
+    <link href="http://Savingss.github.io/2017/09/15/JS%E7%AE%97%E6%B3%95/"/>
+    <id>http://Savingss.github.io/2017/09/15/JS算法/</id>
+    <published>2017-09-15T06:46:21.168Z</published>
+    <updated>2017-09-15T06:48:36.093Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>var ary = [12,2,36,80,99,56,68],ary2 = [1,2,3,4,5,6,7],n = 0;快速查询：function quickSort(ary){  if (ary&lt;=1) {    return ary;  }  var mid_ind = Math.floor(ary.length/2);  var mid = ary.splice(mid_ind,1);  var left = [],right = [];  for (var i = 0; i &lt; ary.length; i++) {    var cur = ary[i];    if (cur&lt;mid[0]) {      left.push(cur)    }else {      right.push(cur)    }  }  return quickSort(left).concat(mid,quickSort(right));}var newArry = quickSort(ary);冒泡排序：function bubble(ary){  var flag = true;  优化代码部分：添加一个flag判断如果一开始数组就已经是排好序的话，减少循环次数，提升性能。  for (var j = 0; j &lt; ary.length-1; j++) {    for (var i = 0; i &lt; ary.length-1-j; i++) {      n++; 测试循环次数，一开始在全局下定义n的值为0，方法执行之后输出n的次数即可完成测试      if (ary[i]&gt;ary[i+1]) {        var temp = ary[i];        ary[i] = ary[i+1];        ary[i+1] = temp;        flag = false;      }    }    优化代码部分：添加一个flag判断如果一开始数组就已经是排好序的话，减少循环次数，提升性能。    if (flag) {      return ary;    }  }  return ary;}console.log(bubble(ary2));console.log(n);插入排序法：function insertSort(ary){  var newArry = [];  newArry[0] = ary[0];  将原数组中的每一项依次和新数组中的值进行比较,如果比他小,就放到该项的前面  for (var i = 0; i &lt; ary.length; i++) {    依次和新数组进行对比    for (var j = 0; j &lt; newArry.length; j++) {      if (ary[i]&lt;newArry[j]) {        newArry.splice(j,0,ary[i]);        break;      }else {        如果j等于新数组的长度-1的话，说明已经和前面都比完，并且是最大的        if (j===newArry.length-1) {          newArry.push(ary[i]);          break;        }      }    }  }  return newArry;}console.log(insertSort(ary));利用递归计算1到100的和,递归就是函数自己调用自己，损耗性能。function sum(n){  if (n&lt;=1) {    return n;  }  return n+sum(n-1);}console.log(sum(100));</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;var ary = [12,2,36,80,99,56,68],ary2 = [1,2,3,4,5,6,7],n = 0;
+快速查询：
+function quickSort(ary){
+  if (ary&amp;lt;=1) {
+    return ary;
+ 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JS常用正则</title>
