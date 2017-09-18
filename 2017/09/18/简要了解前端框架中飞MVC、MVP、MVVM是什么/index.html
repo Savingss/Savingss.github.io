@@ -13,23 +13,27 @@
     
     
     
-    <title>JS的几种排序算法 | 用唇语说colorful的博客</title>
+    <title>简要了解前端框架中飞MVC、MVP、MVVM是什么 | 用唇语说colorful的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="var ary = [12,2,36,80,99,56,68],ary2 = [1,2,3,4,5,6,7],n = 0; 快速查询： function quickSort(ary){   if (ary&amp;lt;=1) {     return ary;   }   var mid_ind = Math.floor(ary.length/2);   var mid = ary.splice(mid">
+    <meta name="description" content="MVC  这个图的意思是这样的：View传送指令到Controller，而Controller则负责完成业务逻辑，然后再要求Model改变状态，最后Model则将新的数据发送到View，使用户界面得到改变。  MVP  MVP和MVC的区别最明显的首先是Controller改名为Present，而且各部分之间的通信都是双向的。同时View和Model不发生联系，是通过Present传递的。  MV">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS的几种排序算法">
-<meta property="og:url" content="http://Savingss.github.io/2017/09/15/JS算法/index.html">
+<meta property="og:title" content="简要了解前端框架中飞MVC、MVP、MVVM是什么">
+<meta property="og:url" content="http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/index.html">
 <meta property="og:site_name" content="用唇语说colorful的博客">
-<meta property="og:description" content="var ary = [12,2,36,80,99,56,68],ary2 = [1,2,3,4,5,6,7],n = 0; 快速查询： function quickSort(ary){   if (ary&amp;lt;=1) {     return ary;   }   var mid_ind = Math.floor(ary.length/2);   var mid = ary.splice(mid">
-<meta property="og:updated_time" content="2017-09-15T06:48:36.093Z">
+<meta property="og:description" content="MVC  这个图的意思是这样的：View传送指令到Controller，而Controller则负责完成业务逻辑，然后再要求Model改变状态，最后Model则将新的数据发送到View，使用户界面得到改变。  MVP  MVP和MVC的区别最明显的首先是Controller改名为Present，而且各部分之间的通信都是双向的。同时View和Model不发生联系，是通过Present传递的。  MV">
+<meta property="og:image" content="http://savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/MVC.jpg">
+<meta property="og:image" content="http://savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/MVP.jpg">
+<meta property="og:image" content="http://savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/MVVM.jpg">
+<meta property="og:updated_time" content="2017-09-18T08:11:26.101Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS的几种排序算法">
-<meta name="twitter:description" content="var ary = [12,2,36,80,99,56,68],ary2 = [1,2,3,4,5,6,7],n = 0; 快速查询： function quickSort(ary){   if (ary&amp;lt;=1) {     return ary;   }   var mid_ind = Math.floor(ary.length/2);   var mid = ary.splice(mid">
+<meta name="twitter:title" content="简要了解前端框架中飞MVC、MVP、MVVM是什么">
+<meta name="twitter:description" content="MVC  这个图的意思是这样的：View传送指令到Controller，而Controller则负责完成业务逻辑，然后再要求Model改变状态，最后Model则将新的数据发送到View，使用户界面得到改变。  MVP  MVP和MVC的区别最明显的首先是Controller改名为Present，而且各部分之间的通信都是双向的。同时View和Model不发生联系，是通过Present传递的。  MV">
+<meta name="twitter:image" content="http://savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/MVC.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="用唇语说colorful的博客" href="/atom.xml">
     
@@ -110,7 +114,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">JS的几种排序算法</div>
+        <div class="flex-col header-title ellipsis">简要了解前端框架中飞MVC、MVP、MVVM是什么</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -132,11 +136,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">JS的几种排序算法</h1>
+        <h1 class="title">简要了解前端框架中飞MVC、MVP、MVVM是什么</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-09-15T06:46:21.168Z" itemprop="datePublished" class="page-time">
-  2017-09-15
+                <time datetime="2017-09-18T08:04:52.381Z" itemprop="datePublished" class="page-time">
+  2017-09-18
 </time>
 
 
@@ -152,13 +156,13 @@
 
 <div class="container body-wrap">
     
-<article id="post-JS算法"
+<article id="post-简要了解前端框架中飞MVC、MVP、MVVM是什么"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">JS的几种排序算法</h1>
+        <h1 class="post-card-title">简要了解前端框架中飞MVC、MVP、MVVM是什么</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-09-15 14:46:21" datetime="2017-09-15T06:46:21.168Z"  itemprop="datePublished">2017-09-15</time>
+            <time class="post-time" title="2017-09-18 16:04:52" datetime="2017-09-18T08:04:52.381Z"  itemprop="datePublished">2017-09-18</time>
 
             
 
@@ -171,95 +175,31 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <pre><code>var ary = [12,2,36,80,99,56,68],ary2 = [1,2,3,4,5,6,7],n = 0;
-快速查询：
-function quickSort(ary){
-  if (ary&lt;=1) {
-    return ary;
-  }
-  var mid_ind = Math.floor(ary.length/2);
-  var mid = ary.splice(mid_ind,1);
-  var left = [],right = [];
-  for (var i = 0; i &lt; ary.length; i++) {
-    var cur = ary[i];
-    if (cur&lt;mid[0]) {
-      left.push(cur)
-    }else {
-      right.push(cur)
-    }
-  }
-  return quickSort(left).concat(mid,quickSort(right));
-}
-var newArry = quickSort(ary);
+            <p><strong>MVC</strong><br><img src="./MVC.jpg" alt="Alt text"></p>
+<blockquote>
+<p>这个图的意思是这样的：View传送指令到Controller，而Controller则负责完成业务逻辑，然后再要求Model改变状态，最后Model则将新的数据发送到View，使用户界面得到改变。</p>
+</blockquote>
+<p><strong>MVP</strong><br><img src="./MVP.jpg" alt="Alt text"></p>
+<blockquote>
+<p>MVP和MVC的区别最明显的首先是Controller改名为Present，而且各部分之间的通信都是双向的。同时View和Model不发生联系，是通过Present传递的。</p>
+</blockquote>
+<p><strong>MVVM</strong><br><img src="./MVVM.jpg" alt="Alt text"></p>
+<blockquote>
+<p>这种模式，最明显的特点是双向绑定，方便了前端开发人员和后端开发人员的有效分工。View是指页面和用户交互的部分，ViewModel是一个用于数据转换的Controller，它可以把Model中的信息转化成View，同时可以从View中把命令传给Model。</p>
+</blockquote>
 
-冒泡排序：
-function bubble(ary){
-  var flag = true;  优化代码部分：添加一个flag判断如果一开始数组就已经是排好序的话，减少循环次数，提升性能。
-  for (var j = 0; j &lt; ary.length-1; j++) {
-    for (var i = 0; i &lt; ary.length-1-j; i++) {
-      n++; 测试循环次数，一开始在全局下定义n的值为0，方法执行之后输出n的次数即可完成测试
-      if (ary[i]&gt;ary[i+1]) {
-        var temp = ary[i];
-        ary[i] = ary[i+1];
-        ary[i+1] = temp;
-        flag = false;
-      }
-    }
-    优化代码部分：添加一个flag判断如果一开始数组就已经是排好序的话，减少循环次数，提升性能。
-    if (flag) {
-      return ary;
-    }
-  }
-  return ary;
-}
-console.log(bubble(ary2));
-console.log(n);
-
-插入排序法：
-function insertSort(ary){
-  var newArry = [];
-  newArry[0] = ary[0];
-  将原数组中的每一项依次和新数组中的值进行比较,如果比他小,就放到该项的前面
-  for (var i = 0; i &lt; ary.length; i++) {
-    依次和新数组进行对比
-    for (var j = 0; j &lt; newArry.length; j++) {
-      if (ary[i]&lt;newArry[j]) {
-        newArry.splice(j,0,ary[i]);
-        break;
-      }else {
-        如果j等于新数组的长度-1的话，说明已经和前面都比完，并且是最大的
-        if (j===newArry.length-1) {
-          newArry.push(ary[i]);
-          break;
-        }
-      }
-    }
-  }
-  return newArry;
-}
-console.log(insertSort(ary));
-
-利用递归计算1到100的和,递归就是函数自己调用自己，损耗性能。
-function sum(n){
-  if (n&lt;=1) {
-    return n;
-  }
-  return n+sum(n-1);
-}
-console.log(sum(100));
-</code></pre>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-09-15T06:48:36.093Z" itemprop="dateUpdated">2017-09-15 14:48:36</time>
+    Last updated: <time datetime="2017-09-18T08:11:26.101Z" itemprop="dateUpdated">2017-09-18 16:11:26</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/09/15/JS算法/" target="_blank" rel="external">http://Savingss.github.io/2017/09/15/JS算法/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/" target="_blank" rel="external">http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/</a>
         
     </div>
     <footer>
@@ -287,7 +227,7 @@ console.log(sum(100));
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://Savingss.github.io/2017/09/15/JS算法/&title=《JS的几种排序算法》 — 用唇语说colorful的博客&pic=http://Savingss.github.io/img/myself.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/&title=《简要了解前端框架中飞MVC、MVP、MVVM是什么》 — 用唇语说colorful的博客&pic=http://Savingss.github.io/img/myself.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -297,22 +237,22 @@ console.log(sum(100));
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://Savingss.github.io/2017/09/15/JS算法/&title=《JS的几种排序算法》 — 用唇语说colorful的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/&title=《简要了解前端框架中飞MVC、MVP、MVVM是什么》 — 用唇语说colorful的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://Savingss.github.io/2017/09/15/JS算法/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS的几种排序算法》 — 用唇语说colorful的博客&url=http://Savingss.github.io/2017/09/15/JS算法/&via=http://Savingss.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《简要了解前端框架中飞MVC、MVP、MVVM是什么》 — 用唇语说colorful的博客&url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/&via=http://Savingss.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://Savingss.github.io/2017/09/15/JS算法/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -332,21 +272,14 @@ console.log(sum(100));
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">简要了解前端框架中飞MVC、MVP、MVVM是什么</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/09/15/JS常用正则/" id="post-next" class="post-nav-link">
+      <a href="/2017/09/15/JS算法/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">JS常用正则</h4>
+        <h4 class="title">JS的几种排序算法</h4>
       </a>
     </div>
   
@@ -440,7 +373,7 @@ console.log(sum(100));
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://Savingss.github.io/2017/09/15/JS算法/&title=《JS的几种排序算法》 — 用唇语说colorful的博客&pic=http://Savingss.github.io/img/myself.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/&title=《简要了解前端框架中飞MVC、MVP、MVVM是什么》 — 用唇语说colorful的博客&pic=http://Savingss.github.io/img/myself.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -450,22 +383,22 @@ console.log(sum(100));
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://Savingss.github.io/2017/09/15/JS算法/&title=《JS的几种排序算法》 — 用唇语说colorful的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/&title=《简要了解前端框架中飞MVC、MVP、MVVM是什么》 — 用唇语说colorful的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://Savingss.github.io/2017/09/15/JS算法/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS的几种排序算法》 — 用唇语说colorful的博客&url=http://Savingss.github.io/2017/09/15/JS算法/&via=http://Savingss.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《简要了解前端框架中飞MVC、MVP、MVVM是什么》 — 用唇语说colorful的博客&url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/&via=http://Savingss.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://Savingss.github.io/2017/09/15/JS算法/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -476,7 +409,7 @@ console.log(sum(100));
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://Savingss.github.io/2017/09/15/JS算法/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/" alt="微信分享二维码">
 </div>
 
 

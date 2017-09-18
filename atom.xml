@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Savingss.github.io/"/>
-  <updated>2017-09-15T06:48:36.093Z</updated>
+  <updated>2017-09-18T08:11:26.101Z</updated>
   <id>http://Savingss.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简要了解前端框架中飞MVC、MVP、MVVM是什么</title>
+    <link href="http://Savingss.github.io/2017/09/18/%E7%AE%80%E8%A6%81%E4%BA%86%E8%A7%A3%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E4%B8%AD%E9%A3%9EMVC%E3%80%81MVP%E3%80%81MVVM%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    <id>http://Savingss.github.io/2017/09/18/简要了解前端框架中飞MVC、MVP、MVVM是什么/</id>
+    <published>2017-09-18T08:04:52.381Z</published>
+    <updated>2017-09-18T08:11:26.101Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>MVC</strong><br><img src="./MVC.jpg" alt="Alt text"></p><blockquote><p>这个图的意思是这样的：View传送指令到Controller，而Controller则负责完成业务逻辑，然后再要求Model改变状态，最后Model则将新的数据发送到View，使用户界面得到改变。</p></blockquote><p><strong>MVP</strong><br><img src="./MVP.jpg" alt="Alt text"></p><blockquote><p>MVP和MVC的区别最明显的首先是Controller改名为Present，而且各部分之间的通信都是双向的。同时View和Model不发生联系，是通过Present传递的。</p></blockquote><p><strong>MVVM</strong><br><img src="./MVVM.jpg" alt="Alt text"></p><blockquote><p>这种模式，最明显的特点是双向绑定，方便了前端开发人员和后端开发人员的有效分工。View是指页面和用户交互的部分，ViewModel是一个用于数据转换的Controller，它可以把Model中的信息转化成View，同时可以从View中把命令传给Model。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;MVC&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;./MVC.jpg&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这个图的意思是这样的：View传送指令到Controller，而Controller则负责完成业务逻辑，然后再要
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JS的几种排序算法</title>
