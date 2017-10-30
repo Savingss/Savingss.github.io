@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Savingss.github.io/"/>
-  <updated>2017-09-19T08:28:39.201Z</updated>
+  <updated>2017-10-30T02:44:52.516Z</updated>
   <id>http://Savingss.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组去重（原生和ES6的写法）</title>
+    <link href="http://Savingss.github.io/2017/10/30/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%EF%BC%88%E5%8E%9F%E7%94%9F%E5%92%8CES6%E7%9A%84%E5%86%99%E6%B3%95%EF%BC%89/"/>
+    <id>http://Savingss.github.io/2017/10/30/数组去重（原生和ES6的写法）/</id>
+    <published>2017-10-30T02:43:04.652Z</published>
+    <updated>2017-10-30T02:44:52.516Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>要求：用JavaScript脚本为Array对象添加一个数组去重的方法</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var a = [1, 1, 2, 2, 3, 3, 0, 0];</div><div class="line">// 1、利用indexof（不兼容IE8及以下）是es5新出的只能适用于IE9及其他标准浏览器</div><div class="line">Array.prototype.unique1 = function () &#123;</div><div class="line">    let arr = [];</div><div class="line">    this.forEach((val, ind) =&gt; &#123;</div><div class="line">        arr.indexOf(val) &lt; 0 ? arr.push(val) : null;</div><div class="line">    &#125;)</div><div class="line">    return arr;</div><div class="line">&#125;</div><div class="line">console.log(a.unique1());</div></pre></td></tr></table></figure></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// 2、利用对象遍历的方法 for in 关键是key唯一。缺点：往对象里面添加键值对的时候，键会隐式调用toString。</div><div class="line">Array.prototype.unique2 = function () &#123;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    var arr = [];</div><div class="line">    this.forEach((val, ind) =&gt; &#123;</div><div class="line">        var cur = this[ind];</div><div class="line">        obj[cur] = cur;</div><div class="line">    &#125;)</div><div class="line">    // console.log(obj);</div><div class="line">    for (var key in obj) &#123;</div><div class="line">        arr.push(obj[key])</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div><div class="line">console.log(a.unique2());</div></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//3、利用对象方法：把当前项值当成对象的属性和属性名</div><div class="line">Array.prototype.unique3 = function () &#123;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    // console.log(this);</div><div class="line">    for (var i = 0; i &lt; this.length; i++) &#123;</div><div class="line">        var cur = this[i];</div><div class="line">        if (obj[cur] === cur) &#123;</div><div class="line">            this.splice(i, 1);</div><div class="line">            i--;</div><div class="line">        &#125;</div><div class="line">        obj[cur] = cur;</div><div class="line">    &#125;</div><div class="line">    return this;</div><div class="line">&#125;</div><div class="line">console.log(a.unique3());</div></pre></td></tr></table></figure><blockquote><p><strong>ES6的方法</strong>：</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 1、利用Array.from()方法可以将Set结构转为数组</div><div class="line">Array.prototype.unique4 = function () &#123;</div><div class="line">    return Array.from(new Set(this))</div><div class="line">&#125;</div><div class="line">console.log(a.unique4());</div></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//2、利用扩展运算符(...)提供了一种更便捷的去重方法</div><div class="line">Array.prototype.unique5 = function () &#123;</div><div class="line">    return [...new Set(this)]</div><div class="line">&#125;</div><div class="line">console.log(a.unique5());</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;要求：用JavaScript脚本为Array对象添加一个数组去重的方法&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>简要了解前端框架中飞MVC、MVP、MVVM是什么</title>
